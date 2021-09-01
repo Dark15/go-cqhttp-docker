@@ -14,7 +14,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
   rm go-cqhttp.tar.gz && \
   mv go-cqhttp /app && \
   apk del .build-deps && \
-  apk add --no-cache ffmpeg && \
+  apk add --no-cache ffmpeg yq && \
   chmod +x /usr/local/bin/entrypoint.sh && \
   chmod +x ./go-cqhttp
 
