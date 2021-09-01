@@ -14,11 +14,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
   rm go-cqhttp.tar.gz && \
   mv go-cqhttp /app && \
   apk del .build-deps && \
-  apk add --no-cache ffmpeg websocat && \
+  apk add --no-cache ffmpeg && \
   chmod +x /usr/local/bin/entrypoint.sh && \
   chmod +x ./go-cqhttp
-
-HEALTHCHECK --interval=1m --timeout=30s --retries=3 \
-  CMD websocat -q -Uu ws://127.0.0.1:6700 2> /dev/null || exit 1
 
 ENTRYPOINT ["entrypoint.sh", "faststart"]
