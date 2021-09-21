@@ -34,24 +34,24 @@ database:
     enable: true
 servers:
   - http:
-    disabled: true
-    host: 127.0.0.1
-    port: 5700
-    timeout: 5
-    middlewares:
-      <<: *default
-    post:
-      - url: ""
-        secret: ""
+      disabled: true
+      host: 127.0.0.1
+      port: 5700
+      timeout: 5
+      middlewares:
+        <<: *default
+      post:
+        - url: ""
+          secret: ""
   - ws:
-    disabled: true
-    host: 127.0.0.1
-    port: 6700
-    middlewares:
-      <<: *default
+      disabled: true
+      host: 127.0.0.1
+      port: 6700
+      middlewares:
+        <<: *default
   - ws-reverse:
-    disabled: true
-    universal: ""
-    reconnect-interval: 3000
-    middlewares:
-      <<: *default
+      disabled: true
+      universal: ""
+      reconnect-interval: 3000
+      middlewares:
+        <<: *default

@@ -1,6 +1,6 @@
 FROM --platform=$TARGETPLATFORM alpine:latest
 ARG BUILDARCH
-ARG version=1.0.0-beta6
+ARG version=1.0.0-beta7-fix2
 
 WORKDIR /app
 VOLUME [ "/app" ]
